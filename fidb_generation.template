@@ -1,0 +1,6 @@
+Duplicate Results File OK = ${logs_dir}/${project}-duplicates.txt
+Do Duplication Detection Do you want to detect duplicates = true
+Choose destination FidDB Please choose the destination FidDB for population = ${project}.fidb
+Select root folder containing all libraries (at a depth of 3): = /${project}/${variant}
+Common symbols file (optional): OK = ${project_dir}/common_symbols.txt
+Enter LanguageID To Process Language ID: = ${langid}
