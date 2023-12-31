@@ -3,7 +3,7 @@
 
 A set of scripts to help generate Ghidra fidb files from DEB packages in a headless mode.
 
-It's based on the work of [THREATrack](https://github.com/threatrack/ghidra-fidb-repo), so thank you for that.
+It's based on the work of [THREATrack](https://github.com/threatrack/ghidra-fid-generator), so thank you for that.
 
 ## Quick start
 
