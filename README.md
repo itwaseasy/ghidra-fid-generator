@@ -52,4 +52,4 @@ All package names must follow [Debian naming conventions](https://www.debian.org
 - `libs_dir`: directory with unpacked DEB files, i.e. the result of the script `01-unpack-debs.sh`. The default is `libs`.
 - `projects_dir`: directory in which Ghidra will create projects when importing libraries. Default value: `projects`.
 - `logs_dir`: directory where Ghidra will write logs. Default value: `logs`.
-- `output_dir`: directory for storing generated fidb files, default `fid_files`.
+- `output_dir`: directory for storing generated fidb files, default is `fid_files`.
