@@ -28,9 +28,9 @@ debian_bookworm_zlib1g-dev_1.2.13.dfsg-1_amd64.fidb
 $ sudo apt install binutils gettext
 $ # or `brew install binutils gettext` if you're using macOS
 ```
- **IMPORTANT:** scripts require GNU `ar` to run correctly. BSD `ar`, which is the default on macOS, will not work. Therefore, please configure your `PATH` correctly after installing `binutils` with `brew`.
+ **IMPORTANT:** GNU `ar` is required for scripts to work correctly. The default BSD `ar` on macOS will not work. So please set your `PATH` correctly after installing `binutils` using Brew.
 
-All package names must follow the [Debian naming conventions](https://www.debian.org/doc/manuals/debian-faq/pkg-basics.en.html#pkgname). This is already the case if you'll get them directly from the Debian or Ubuntu repos.
+All package names must follow [Debian naming conventions](https://www.debian.org/doc/manuals/debian-faq/pkg-basics.en.html#pkgname). This is already the case if you get them directly from the Debian or Ubuntu repositories.
 ​
 ## Usage
 
@@ -38,9 +38,9 @@ All package names must follow the [Debian naming conventions](https://www.debian
 ./01-unpack-debs.sh <path> <variant> [output_dir]
 ```
 
-- `path`: directory that contains debs to process.
-- `variant`: as Ghidra docs say, "*Version information that cannot be encoded in the formal _Version_ field can be encoded in this field*". So usually it's a compiler version, OS, or whatever else you would like.
-- `output_dir`: output directory for unpacked `.a` files, `libs` by default.
+- `path`: directory containing debs to process.
+- `variant`: as the Ghidra docs say, "*Version information that cannot be encoded in the formal _Version_ field can be encoded in this field*". This is usually the version of the compiler, OS, or whatever you want.
+- `output_dir`: output directory for unpacked `.a` files, default is `libs`.
 
 <br/>
 
@@ -48,8 +48,8 @@ All package names must follow the [Debian naming conventions](https://www.debian
 ./02-generate-fidb.sh <ghidra_home> [libs_dir] [projects_dir] [logs_dir] [output_dir]
 ```
 
-- `ghidra_home`: directory that contains Ghidra installation.
-- `libs_dir`: directory with unpacked DEB files, i.e. the result of the `01-unpack-debs.sh` script. The default is `libs`.
-- `projects_dir`: directory where Ghidra will create projects during libs importing. The default is `projects`.
-- `logs_dir`: directory where Ghidra will write logs, `logs` by default.
-- `output_dir`: directory to store generated fidb files, `fid_files` by default.
+- `ghidra_home`: directory containing the Ghidra installation.
+- `libs_dir`: directory with unpacked DEB files, i.e. the result of the script `01-unpack-debs.sh`. The default is `libs`.
+- `projects_dir`: directory in which Ghidra will create projects when importing libraries. Default value: `projects`.
+- `logs_dir`: directory where Ghidra will write logs. Default value: `logs`.
+- `output_dir`: directory for storing generated fidb files, default `fid_files`.
